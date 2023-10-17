@@ -1,7 +1,7 @@
 /* Global */
 :root{
-    --color: #15c653;
-    --txt: rgb(185, 185, 185)
+    --color: #21d27a57;
+    --txt: rgb(0, 0, 0)
 }
 
 body {
@@ -17,6 +17,10 @@ a {
 
 a:hover{
     color: white;
+}
+
+p {
+    margin: 15px;
 }
 
 .content {
@@ -61,11 +65,12 @@ a:hover{
 .background-banner {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 375px;
     color: rgb(95, 197, 163);
     background-color: rgba(0, 0, 0, 0.288);
     padding: 15px;
-    margin-top: 50%;
+    margin-top: 30%;
 }
 
 .background-banner img {
@@ -88,14 +93,25 @@ a:hover{
     flex: 1;
 }
 
-.dummy-text {
-    font-size: 1.5rem;
+/* Top Form */
+.form-header {
+    border-bottom: 1px solid #ffffff;
+}
+
+.header-text {
+    font-size: 2rem;
     font-weight: bold;
     margin-left: 20px;
 }
 
 .remote-text {
     margin-left: 20px;
+    color: #333; 
+}
+
+.signup-text {
+    margin-left: 20px;
+    color: #333; 
 }
 
 /* Middle Form */
@@ -104,35 +120,59 @@ a:hover{
     flex-flow: row wrap; /* THIS FORMATS EVERYTHING! */
     justify-content: center;
     background-color: #1c8094;
-    box-shadow: 0 10px 20px -2px rgb(192, 196, 197);
+    box-shadow: 0 10px 20px -2px rgb(183, 223, 209);
     gap: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
+    border-bottom: 1px solid #ffffff;
 }
 
+/* Class input */
 .input {
     display: flex;
     flex-flow: column wrap; /* THIS FORMATS EVERYTHING! */
     width: 40%;
-    text-transform: uppercase;
-    font-size: 0.7rem;
 }
+/* input container itself */
+input {
+    border-radius: 4px;
+    border: 0;
+    border-bottom: 1px solid rgb(0,0,0,.4);
+    padding: 6px 6px 6px 10px;
+    margin-top: 5px;
+    background: transparent;
+    transition: border-bottom 1s ease-in, color 1s ease-in; /* Exclude background from the transition */
+}
+
+.input input::placeholder {
+    color: #333;  /* Change the color to your preferred color */
+}
+
 
 input:focus{
     outline: none;
     border: 2px solid var(--color);
 }
 
-/* Bottom Form */
+label {
+    color: #333; 
+    font-size: 16px; 
+    font-weight: bold; 
+    text-align: left; 
+    text-transform: uppercase;
+    margin-bottom: 5px; 
+}
 
+/* Bottom Form */
 button {
     font-weight: 700;
     font-size: 1.2em;
     border: 2px solid;
     border-radius: 5px;
     padding: 10px 40px;
-    margin: 40px 15px;
+    margin: 20px 15px;
     cursor: pointer;
+    color: #333; 
     background-color: #21d27a57;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
@@ -147,8 +187,11 @@ button {
     display: flex;
     gap: 5px;
     margin: 15px;
-    margin-top: -40px;
+    margin-top: -10px;
 }
+
+
+
 
 /* Phone */
 @media only screen and (max-width: 600px) {
@@ -175,13 +218,17 @@ button {
         display: flex;
         margin: auto;
         margin-top: 0;
-        margin-top: 10px;
 
     }
 
     .log-in {
         display: flex;
         margin-top: 0;
+        padding: 10px;
         justify-content: center;
+    }
+
+    .background-overlay {
+        display: none; /* Hide the background-overlay */
     }
 }
