@@ -1,0 +1,42 @@
+/* Global */
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('/Outfit/Outfit-VariableFont_wght.ttf') format('ttf'),
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+a {
+    color: rgb(95, 197, 163); /* You can use any valid color value */
+    text-decoration: none; /* Removes the underline; you can customize this as well */
+}
+
+/* Video */
+.background-vid {
+    position: fixed;
+    /* position image to the center */
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    /* translate the image to the center as screen size fluctuates */
+    transform: translateX(-50%) translateY(-50%);
+    /* set the z-index to be behind everything */
+    z-index: -1;  
+}
+
+.background-overlay {
+    position: absolute;
+    bottom: 0;
+    /* stretches width of footer */
+    width: 100%; 
+    padding: 10px;
+    text-align: center; 
+    background-color: #21d27a57;
+}
