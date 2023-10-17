@@ -1,19 +1,32 @@
 /* Global */
+:root{
+    --color: #15c653;
+    --txt: rgb(185, 185, 185)
+}
 
 body {
     margin: 0;
-    overflow: hidden;
+    overflow: scroll;
     font-family: 'Tilt Neon', sans-serif;
 }
 
 a {
-    color: rgb(95, 197, 163); /* You can use any valid color value */
+    color: #21d27a; /* You can use any valid color value */
     text-decoration: none; /* Removes the underline; you can customize this as well */
+}
+
+a:hover{
+    color: white;
 }
 
 .content {
     display: flex;
     flex-flow: row-wrap;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
 }
 
 /* Video */
@@ -39,20 +52,20 @@ a {
     /* stretches width of footer */
     width: 100%; 
     padding: 10px;
-    text-align: center; 
-    background-color: #21d27a57;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.288);
+    color: white;
 }
 
-/* Logo Text */
-
+/* Logo Banner */
 .background-banner {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 375px;
     color: rgb(95, 197, 163);
     background-color: rgba(0, 0, 0, 0.288);
     padding: 15px;
-    margin-top: 20%;
+    margin-top: 50%;
 }
 
 .background-banner img {
@@ -68,10 +81,11 @@ a {
 
 /* Right Side */
 .right-content {
-    display: inline-block;
+    display: flex;
     flex-flow: column nowrap;
     background-color: #5fb4c5;
-    flex: auto;
+    width: 60%;
+    flex: 1;
 }
 
 .dummy-text {
@@ -84,12 +98,13 @@ a {
     margin-left: 20px;
 }
 
+/* Middle Form */
 .form {
     display: flex;
     flex-flow: row wrap; /* THIS FORMATS EVERYTHING! */
     justify-content: center;
     background-color: #1c8094;
-    box-shadow: 0 10px 20px -2px rgb(255, 255, 255);
+    box-shadow: 0 10px 20px -2px rgb(192, 196, 197);
     gap: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -101,4 +116,58 @@ a {
     width: 40%;
     text-transform: uppercase;
     font-size: 0.7rem;
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid var(--color);
+}
+
+/* Bottom Form */
+
+button {
+    font-weight: 700;
+    font-size: 1.2em;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 10px 40px;
+    margin: 40px 15px;
+    cursor: pointer;
+    background-color: #21d27a57;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #1c8094;
+    color: #fff;
+    transform: scale(1.05); /* Add a subtle scale effect on hover */
+}
+
+.log-in{
+    display: flex;
+    gap: 5px;
+    margin: 15px;
+    margin-top: -40px;
+}
+
+/* Phone */
+@media only screen and (max-width: 600px) {
+    .content {
+        flex-flow: column nowrap;
+        flex: auto;
+    }
+    .background-banner {
+        margin-top: 0;
+        width: auto;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.606);
+    }
+
+    .form {
+        margin-top: 0; /* Adjust the margin-top for phones */
+    }
+
+    .right-content {
+        width: 100%;
+    }
 }
