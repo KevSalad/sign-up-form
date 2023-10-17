@@ -170,4 +170,18 @@ button {
     .right-content {
         width: 100%;
     }
+
+    button {
+        display: flex;
+        margin: auto;
+        margin-top: 0;
+        margin-top: 10px;
+
+    }
+
+    .log-in {
+        display: flex;
+        margin-top: 0;
+        justify-content: center;
+    }
 }
